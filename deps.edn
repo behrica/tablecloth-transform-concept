@@ -5,6 +5,8 @@
 
         org.tcrawley/dynapath    {:mvn/version "0.2.5"}
         com.cemerick/pomegranate {:mvn/version "0.4.0"}
+        org.bytedeco/openblas-platform {:mvn/version "0.3.10-1.5.4"}
+        org.bytedeco/openblas {:mvn/version "0.3.10-1.5.4"}
 
         }
  :aliases
