@@ -9,19 +9,17 @@
           [tech.v3.dataset.tensor :as ds-tensor]
           [tech.v3.libs.xgboost]
           [tech.v3.libs.smile.classification]
-
-          [try-transform.transformers :as tf]
-          )
-)
+          [try-transform.transformers :as tf]))
 
 
 
 
 (defn ds->x-y [ctx]
-  (user/def-let [y (tf/select-columns ctx :target)
+  (let [y (tf/select-columns ctx :target)
                  X (tf/drop-columns ctx :target)
                  ]
     (assoc ctx :y (:dataset y) :dataset (:dataset  X))))
+
 
 (defn do-pca [ctx]
   (case (:mode ctx)

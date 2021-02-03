@@ -1,16 +1,9 @@
 (ns try-transform.transformers
-(:require [tablecloth.api :as tc]
-          [tech.v3.ml :as ml]
-          [tech.v3.dataset.column-filters :as cf]
-          [tech.v3.dataset.modelling :as ds-mod]
-          [tech.v3.dataset :as ds]
-          [tech.v3.protocols.dataset :as proto-ds]
-          [tech.v3.libs.xgboost]
-          [tech.v3.dataset.math :as ds-math]
-          )
-)
-
-
+  (:require [tablecloth.api :as tc]
+            [tech.v3.dataset :as ds]
+            [tech.v3.dataset.math :as ds-math]
+            [tech.v3.dataset.modelling :as ds-mod]
+            [tech.v3.ml :as ml]))
 
 ;;;  adapt exiting function to be transform compliant
 (defn drop-rows [pipeline-context rows-selector]
@@ -47,9 +40,6 @@
   (assoc pipeline-context
          :dataset
          (tc/append (:dataset pipeline-context) datasets)))
-
-
-
 
 (defn categorical->number [pipeline-context filter-fn-or-dataset]
   (assoc pipeline-context
