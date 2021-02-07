@@ -1,7 +1,7 @@
 {:paths ["src" "resources"]
  :deps {org.clojure/clojure {:mvn/version "1.10.1"}
-        techascent/tech.ml {:mvn/version "5.00-beta-14"}
-        scicloj/tablecloth {:mvn/version "5.00-beta-28"}
+        techascent/tech.ml {:mvn/version "5.00-beta-15-SNAPSHOT"}
+        scicloj/tablecloth {:mvn/version "5.00-beta-29-pipeline"}
 
         org.tcrawley/dynapath    {:mvn/version "0.2.5"}
         com.cemerick/pomegranate {:mvn/version "0.4.0"}
